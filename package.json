@@ -1,7 +1,7 @@
 {
   "name": "@townsquarelabs/ui-vue",
   "private": false,
-  "version": "2.0.5,",
+  "version": "2.0.6",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,7 +14,9 @@
     "lint-fix": "eslint --fix --ext .ts,.vue src",
     "lint": "eslint",
     "prepare": "husky",
-    "link": "yarn link"
+    "link": "yarn link",
+    "changeset": "changeset",
+    "version": "changeset version"
   },
   "publishConfig": {
     "access": "public"
@@ -63,6 +65,7 @@
     }
   },
   "dependencies": {
+    "@changesets/cli": "^2.27.7",
     "@tonconnect/ui": "2.0.5",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/composition-api": "^1.7.2",
