@@ -66,7 +66,7 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.27.7",
-    "@tonconnect/ui": "2.0.5",
+    "@tonconnect/ui": "2.0.6",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/composition-api": "^1.7.2",
     "axios": "^0.27.2",
