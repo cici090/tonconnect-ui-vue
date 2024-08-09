@@ -28,10 +28,10 @@ jobs:
       - name: Build project
         run: yarn build
 
-      - name: Publish package
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish
+      # - name: Publish package
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   run: npm publish
 
       - name: Verify NPM token with multiple commands 1
         run: |
