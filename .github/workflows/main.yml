@@ -19,13 +19,22 @@ jobs:
         with:
           node-version: '${{ env.NVMRC }}'
 
-      - name: Install dependencies
-        run: yarn install
+      - name: Set up NPM token
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
-      - name: Build project
-        run: yarn build
-
-      - name: Publish package
+      - name: Verify NPM token
+        run: |
+          npm whoami
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish
+
+      # - name: Install dependencies
+      #   run: yarn install
+
+      # - name: Build project
+      #   run: yarn build
+
+      # - name: Publish package
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   run: npm publish
