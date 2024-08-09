@@ -1,7 +1,7 @@
 {
-  "name": "@townsquarelabs/ui-vue",
+  "name": "npm-action-publish-test",
   "private": false,
-  "version": "2.0.5",
+  "version": "1.0.5",
   "type": "module",
   "scripts": {
     "dev": "vite",
