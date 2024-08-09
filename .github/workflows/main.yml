@@ -11,18 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Read .nvmrc
-        run: echo "NVMRC=$(cat .nvmrc)" >> $GITHUB_ENV
+      # - name: Read .nvmrc
+      #   run: echo "NVMRC=$(cat .nvmrc)" >> $GITHUB_ENV
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '${{ env.NVMRC }}'
+      # - name: Set up Node.js
+      #   uses: actions/setup-node@v2
+      #   with:
+      #     node-version: '${{ env.NVMRC }}'
 
-      - name: Set up NPM token
+      - name: Set up NPM token 1
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
-      - name: Verify NPM token with multiple commands
+      - name: Verify NPM token with multiple commands 1
         run: |
           echo "Running npm whoami..."
           npm whoami
@@ -34,10 +34,10 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 
-      - name: Set up NPM token
+      - name: Set up NPM token 2
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN_NEW }}" > ~/.npmrc
 
-      - name: Verify NPM token with multiple commands
+      - name: Verify NPM token with multiple commands 2
         run: |
           echo "Running npm whoami..."
           npm whoami
