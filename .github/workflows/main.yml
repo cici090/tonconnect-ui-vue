@@ -19,19 +19,19 @@ jobs:
       #   with:
       #     node-version: '${{ env.NVMRC }}'
 
-      - name: Set up NPM token 1
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      # - name: Set up NPM token 1
+      #   run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
-      - name: Verify NPM token with multiple commands 1
-        run: |
-          echo "Running npm whoami..."
-          npm whoami
-          echo "Running npm ping..."
-          npm ping
-          echo "Running npm publish --dry-run..."
-          npm publish --dry-run
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Verify NPM token with multiple commands 1
+      #   run: |
+      #     echo "Running npm whoami..."
+      #     npm whoami
+      #     echo "Running npm ping..."
+      #     npm ping
+      #     echo "Running npm publish --dry-run..."
+      #     npm publish --dry-run
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 
       - name: Set up NPM token 2
