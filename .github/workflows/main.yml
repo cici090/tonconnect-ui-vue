@@ -19,14 +19,14 @@ jobs:
         with:
           node-version: '${{ env.NVMRC }}'
 
-      - name: Set up NPM token 1
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      # - name: Set up NPM token 1
+      #   run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
-      - name: Install dependencies
-        run: yarn install
+      # - name: Install dependencies
+      #   run: yarn install
 
-      - name: Build project
-        run: yarn build
+      # - name: Build project
+      #   run: yarn build
 
       # - name: Publish package
       #   env:
